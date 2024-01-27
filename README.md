@@ -1,25 +1,25 @@
-# aaaaaa
-     #include <ArduinoJson.h>
-    #include <WiFi.h>
-#include <PubSubClient.h>
-#define BUILTIN_LED 2
+# Codigo
+   #include <ArduinoJson.h>
+   #include <WiFi.h>
+   #include <PubSubClient.h>
+   #define BUILTIN_LED 2
 
-#include <LiquidCrystal_I2C.h>
-#define I2C_ADDR 0x27 
-#define LCD_COLUMNS 20
-#define LCD_LINES 4
-int boton1 = 4;
-int boton2 = 5;
-int boton3 = 2;
-int estado = 0;
+   #include <LiquidCrystal_I2C.h>
+   #define I2C_ADDR 0x27 
+   #define LCD_COLUMNS 20
+   #define LCD_LINES 4
+   int boton1 = 4;
+   int boton2 = 5;
+   int boton3 = 2;
+   int estado = 0;
 
-LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
+   LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 
-const char* ssid = "Wokwi-GUEST";
-const char* password = "";
-const char* mqtt_server = "3.65.168.153";
-String username_mqtt="ProyectoFinal";
-String password_mqtt="12345678";
+   const char* ssid = "Wokwi-GUEST";
+   const char* password = "";
+   const char* mqtt_server = "3.65.168.153";
+   String username_mqtt="ProyectoFinal";
+   String password_mqtt="12345678";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
